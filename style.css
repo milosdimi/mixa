@@ -1,0 +1,98 @@
+.navbar-brand img {
+  width: 100px; /* Ändere die Breite des Logos für Mobilgeräte */
+  height: auto; /* Auto-Höhe beibehalten */
+}
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 80px; /* Ändere die Breite des Logos für Mobilgeräte */
+    height: auto; /* Auto-Höhe beibehalten */
+  }
+}
+
+/* Textfarbe der Links */
+.nav-link {
+  color: rgb(0, 0, 0); /* Setzt die Textfarbe auf Weiß */
+  font-size: 16px; /* Schriftgröße anpassen */
+}
+
+.nav-link:hover {
+  color: #ffc107; /* Ändert die Farbe beim Hover (optional) */
+  text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+hr {
+  border: none; /* Entfernt die Standardlinie */
+  border-top: 2px solid #007bff; /* Fügt eine benutzerdefinierte Linie hinzu */
+  width: 50%; /* Setzt die Breite der Linie */
+  margin: 20px auto; /* Zentriert die Linie */
+}
+.input-group-text {
+  background-color: #007bff; /* Hintergrundfarbe für das Icon */
+  color: white; /* Textfarbe für das Icon */
+}
+.btn i {
+  margin-right: 5px; /* Abstand zwischen dem Icon und dem Text */
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(1.3);
+}
+footer a {
+  text-decoration: none; /* Entfernt den Unterstrich */
+}
+/* Stil für die Kontakt-Links */
+.contact-info a {
+  color: inherit; /* Erbt die Textfarbe vom Elternelement */
+  text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+/* Stil für Hover-Effekt (optional) */
+.contact-info a:hover {
+  color: #007bff; /* Ändert die Farbe beim Überfahren mit der Maus (z.B. Bootstrap Primärfarbe) */
+  text-decoration: underline; /* Optional: fügt eine Unterstreichung beim Hover hinzu */
+}
+#pocetna {
+  background: linear-gradient(165deg, #df6161, #ffffff); /* Farbverlauf von Blau nach Lila */
+}
+#thank-you {
+  background: linear-gradient(165deg, #df6161, #ffffff)
+}
+
+#pocetna h1,
+#pocetna p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#kontakt {
+  background: linear-gradient(165deg, #df6161, #ffffff);
+}
+
+#o-nama {
+  background-image: url('./img/pexels-mcraftpix-21014.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative; /* Für das Pseudoelement */
+}
+
+#o-nama::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Halbtransparenter schwarzer Hintergrund */
+  z-index: 1; /* Hinter den Text stellen */
+}
+
+#o-nama .container {
+  position: relative; /* Text über das Pseudoelement legen */
+  z-index: 2; /* Vor dem Hintergrund stehen */
+}
+
+#o-nama h2,
+#o-nama p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Fügt einen Schatten hinzu */
+}
+
+

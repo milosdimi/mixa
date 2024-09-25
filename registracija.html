@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/mixa.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Your Custom JS -->
+    <script src="script.js"></script>
+
+    <title>Mixa | Registracija</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="./img/mixa.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <!-- Toggle button for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Početna</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registracija.html">Izracunaj REG</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Početna Section -->
+    <section id="pocetna" class="p-5 text-center bg-light">
+      <div class="container">
+        <h1 class="display-4">Dobrodošli u Mixa Tehnički pregled</h1>
+        <p class="lead">Profesionalna auto-inspekcija i usluge.</p>
+      </div>
+    </section>
+
+    <!-- Auto Registrierungsformular Section -->
+    <section id="registracija" class="p-5 bg-light">
+      <div class="container">
+        <h2 class="text-center">Izračunajte troškove registracije vozila</h2>
+        <hr class="my-4" />
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h3>Unesite podatke o vozilu i kontakt informacije</h3>
+            <form onsubmit="sendMail(event)">
+              <div class="mb-3">
+                <label for="vehicle-type" class="form-label">Tip vozila</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-car-front"></i
+                  ></span>
+                  <select
+                    id="vehicle-type"
+                    name="vehicle-type"
+                    class="form-select"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Izaberite tip vozila
+                    </option>
+                    <option value="automobil">Automobil</option>
+                    <option value="kamion">Kamion</option>
+                    <option value="moped">Moped</option>
+                    <option value="motor">Motor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="make" class="form-label">Marka vozila</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-car"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="make"
+                    name="make"
+                    placeholder="Unesite marku vozila"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="model" class="form-label">Model vozila</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-car-front"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="model"
+                    name="model"
+                    placeholder="Unesite model vozila"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="year" class="form-label">Godina proizvodnje</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-calendar"></i
+                  ></span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="year"
+                    name="year"
+                    placeholder="Unesite godinu proizvodnje"
+                    required
+                    min="1900"
+                    max="2024"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="mileage" class="form-label"
+                  >Kilometraža (u km)</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-speedometer2"></i
+                  ></span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="mileage"
+                    name="mileage"
+                    placeholder="Unesite kilometražu vozila"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="ps" class="form-label">Pferdestärken (PS)</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-tachometer"></i
+                  ></span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ps"
+                    name="ps"
+                    placeholder="Unesite broj PS"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="engine-displacement" class="form-label"
+                  >Hubraum (in L)</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-gear"></i
+                  ></span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="engine-displacement"
+                    name="engine-displacement"
+                    placeholder="Unesite hubraum (in L)"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="co2-emissions" class="form-label"
+                  >CO2 Ausstoß (in g/km)</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-cloud"></i
+                  ></span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="co2-emissions"
+                    name="co2-emissions"
+                    placeholder="Unesite CO2 ausstoß (in g/km)"
+                    required
+                  />
+                </div>
+              </div>
+              <!-- Kontaktinformationen -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email adresa</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-envelope"></i
+                  ></span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Unesite vaš email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Telefon</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-telephone"></i
+                  ></span>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="Unesite vaš broj telefona"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Poruka (opciono)</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-chat"></i
+                  ></span>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Dodatne informacije (opciono)"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-calculator"></i> Izračunajte troškove
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light p-4 text-center">
+      <div class="container">
+        <!-- Social Media Links -->
+        <div class="mb-3">
+          <a href="https://www.facebook.com/mixa015doo" class="text-light me-3">
+            <i class="bi bi-facebook" style="font-size: 1.5rem"></i>
+          </a>
+          <a href="https://www.instagram.com/mixa.015/" class="text-light me-3">
+            <i class="bi bi-instagram" style="font-size: 1.5rem"></i>
+          </a>
+        </div>
+
+        <!-- Copyright and Contact Info -->
+        <p class="mb-0">© 2024 Mixa Tehnicki Pregled. Sva prava zadržana.</p>
+        <p class="mb-0">
+          <a
+            href="https://maps.app.goo.gl/TjANF8AhzrsoZjxg8"
+            class="d-block mb-2"
+          >
+            <i class="bi bi-geo-alt-fill me-2"></i>Adresa: Kralja Milutina 28v
+          </a>
+          <a href="tel:+3811234567" class="d-block mb-2">
+            <i class="bi bi-telephone-fill me-2"></i><span>+3811234567</span>
+          </a>
+          <a href="mailto:mixa@test.com" class="d-block mb-2">
+            <i class="bi bi-envelope-fill me-2"></i>mixa@test.com
+          </a>
+        </p>
+        <p class="mb-0">made by<a href="https://www.dimit.cc/"> dimit</a></p>
+      </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="alert alert-info fixed-bottom mb-0">
+      <div class="container d-flex justify-content-between align-items-center">
+        <p class="mb-0">
+          Mi koristimo kolačiće kako bismo vam pružili najbolje iskustvo na
+          našoj veb stranici . Korišćenjem ovog sajta, slažete se sa Slažemo se
+          sa upotrebom kolačića. Za više informacija, pogledajte U našem
+          <a href="/datenschutzerklaerung.html" class="alert-link"
+            >Pravila o privatnosti</a
+          >.
+        </p>
+        <div class="d-flex">
+          <button id="accept-cookies" class="btn btn-success btn-sm">
+            Prihvatam
+          </button>
+          <button id="decline-cookies" class="btn btn-danger btn-sm ms-2">
+            Odbijam
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/mixa.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Your Custom JS -->
+    <script src="script.js"></script>
+
+    <title>Mixa | Home</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="./img/mixa.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <!-- Toggle button for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Početna</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">O nama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registracija.html">Izracunaj REG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontakt">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Početna Section -->
+    <section id="pocetna" class="p-5 text-center bg-light">
+      <div class="container">
+        <h1 class="display-4">Dobrodošli u Mixa Tehnički pregled</h1>
+        <p class="lead">Profesionalna auto-inspekcija i usluge.</p>
+      </div>
+    </section>
+
+    <!-- O nama Section -->
+    <section id="o-nama" class="p-5 text-center bg-white">
+      <div class="container">
+        <h2>O nama</h2>
+        <p>
+          Mi smo tim profesionalaca sa dugogodišnjim iskustvom u
+          auto-inspekciji. Naš cilj je da pružimo najviši nivo usluga i
+          obezbedimo sigurnost na putevima.
+        </p>
+      </div>
+    </section>
+
+    <!-- Usluge Section -->
+    <section id="usluge" class="p-5 bg-light">
+      <div class="container">
+        <h2 class="text-center">Naše usluge</h2>
+        <hr class="my-4" />
+        <!-- Trennlinie -->
+        <div class="row text-center">
+          <div class="col-md-4">
+            <i class="bi bi-wrench" style="font-size: 2rem"></i>
+            <h3>Tehnički pregled</h3>
+            <p>Profesionalni tehnički pregledi vozila.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-car-front" style="font-size: 2rem"></i>
+            <h3>Registracija vozila</h3>
+            <p>Brza i sigurna registracija vašeg vozila.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-tools" style="font-size: 2rem"></i>
+            <h3>
+              <a
+                href="/registracija.html"
+                class="text-decoration-none text-dark"
+              >
+                Izračunajte Registraciju
+              </a>
+            </h3>
+            <p>
+              Jednostavno pošaljite upit za približnu cenu registracije vašeg
+              automobila.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="p-5 text-center bg-white">
+      <div class="container">
+        <h2>Kontaktirajte nas</h2>
+        <!-- Kontakt Informationen -->
+        <div class="contact-info mb-4">
+          <a
+            href="https://maps.app.goo.gl/TjANF8AhzrsoZjxg8"
+            class="d-block mb-2"
+          >
+            <i class="bi bi-geo-alt-fill me-2"></i>Adresa: Kralja Milutina 28v
+          </a>
+          <a href="tel:+3811234567" class="d-block mb-2">
+            <i class="bi bi-telephone-fill me-2"></i><span>+3811234567</span>
+          </a>
+          <a href="mailto:mixa@test.com" class="d-block mb-2">
+            <i class="bi bi-envelope-fill me-2"></i>mixa@test.com
+          </a>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="mb-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.2171794920479!2d21.314227594430356!3d43.586369836059184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475689715af2179d%3A0xf4151b9b7c64d1de!2sTehnicki%20pregled%2C%2C%20MIXA%20015!5e1!3m2!1sde!2sat!4v1727293506789!5m2!1sde!2sat"
+            width="100%"
+            height="350"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- Booking Form -->  
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h3>Rezervišite termin</h3>
+            <form onsubmit="sendMail(event)">
+              <div class="mb-3">
+                <label for="name" class="form-label">
+                  <i class="bi bi-person"></i> Ime i prezime
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Unesite vaše ime"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  <i class="bi bi-envelope"></i> Email adresa
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Unesite vaš email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">
+                  <i class="bi bi-telephone"></i> Telefon
+                </label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="Unesite vaš broj telefona"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">
+                  <i class="bi bi-calendar"></i> Datum termina
+                </label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="date"
+                  name="date"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">
+                  <i class="bi bi-chat-left-text"></i> Poruka (opciono)
+                </label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Napišite vašu poruku"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check-circle"></i> Rezervišite termin
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light p-4 text-center">
+      <div class="container">
+        <!-- Social Media Links -->
+        <div class="mb-3">
+          <a href="https://www.facebook.com/mixa015doo" class="text-light me-3">
+            <i class="bi bi-facebook" style="font-size: 1.5rem"></i>
+          </a>
+          <a href="https://www.instagram.com/mixa.015/" class="text-light me-3">
+            <i class="bi bi-instagram" style="font-size: 1.5rem"></i>
+          </a>
+        </div>
+
+        <!-- Copyright and Contact Info -->
+        <p class="mb-0">© 2024 Mixa Tehnicki Pregled. Sva prava zadržana.</p>
+        <p class="mb-0">
+          <a
+            href="https://maps.app.goo.gl/TjANF8AhzrsoZjxg8"
+            class="d-block mb-2"
+          >
+            <i class="bi bi-geo-alt-fill me-2"></i>Adresa: Kralja Milutina 28v
+          </a>
+          <a href="tel:+3811234567" class="d-block mb-2">
+            <i class="bi bi-telephone-fill me-2"></i><span>+3811234567</span>
+          </a>
+          <a href="mailto:mixa@test.com" class="d-block mb-2">
+            <i class="bi bi-envelope-fill me-2"></i>mixa@test.com
+          </a>
+        </p>
+        <p class="mb-0">made by<a href="https://www.dimit.cc/"> dimit</a></p>
+      </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="alert alert-info fixed-bottom mb-0">
+      <div class="container d-flex justify-content-between align-items-center">
+        <p class="mb-0">
+          Mi koristimo kolačiće kako bismo vam pružili najbolje iskustvo na
+          našoj veb stranici . Korišćenjem ovog sajta, slažete se sa Slažemo se
+          sa upotrebom kolačića. Za više informacija, pogledajte U našem
+          <a href="/datenschutzerklaerung.html" class="alert-link"
+            >Pravila o privatnosti</a
+          >.
+        </p>
+        <div class="d-flex">
+          <button id="accept-cookies" class="btn btn-success btn-sm">
+            Prihvatam
+          </button>
+          <button id="decline-cookies" class="btn btn-danger btn-sm ms-2">
+            Odbijam
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
