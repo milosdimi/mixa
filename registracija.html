@@ -41,7 +41,7 @@
         <!-- Logo -->
         <a class="navbar-brand" href="/index.html">
           <img
-            src="./img/mixa.png"
+            src="./img/mixalogo.jpg"
             alt="Logo"
             width="30"
             height="30"
@@ -77,9 +77,36 @@
         </div>
       </div>
     </nav>
-    <!-- Početna Section -->
-    <section id="pocetna" class="p-5 text-center bg-light">
-      <div class="container">
+    <!-- Početna Section mit Video-Hintergrund und Text-Overlay -->
+    <section
+      id="pocetna"
+      class="text-center"
+      style="position: relative; margin-bottom: 0"
+    >
+      <!-- Hintergrundvideo -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-100"
+        style="height: 36vh; object-fit: cover"
+      >
+        <source src="./img/video.mp4" type="video/mp4" />
+        Dein Browser unterstützt kein HTML5-Video.
+      </video>
+
+      <!-- Dunkles Overlay hinter dem Text -->
+      <div
+        class="position-absolute w-100 h-100"
+        style="top: 0; left: 0; background: rgba(0, 0, 0, 0.5); z-index: 0"
+      ></div>
+
+      <!-- Inhalt -->
+      <div
+        class="container position-absolute text-white"
+        style="top: 0; left: 0; right: 0; padding-top: 20px; z-index: 1"
+      >
         <h1 class="display-4">Dobrodošli u Mixa Tehnički pregled</h1>
         <p class="lead">Profesionalna auto-inspekcija i usluge.</p>
       </div>
@@ -185,7 +212,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="ps" class="form-label">Konjska Snaga (PS)</label>
+                <label for="ps" class="form-label">Snaga (kW)</label>
                 <div class="input-group">
                   <span class="input-group-text"
                     ><i class="bi bi-tachometer"></i
@@ -195,14 +222,14 @@
                     class="form-control"
                     id="ps"
                     name="ps"
-                    placeholder="Unesite broj PS"
+                    placeholder="Unesite broj kW"
                     required
                   />
                 </div>
               </div>
               <div class="mb-3">
                 <label for="engine-displacement" class="form-label"
-                  >Zapremina Motora (in L)</label
+                  >Zapremina Motora (in ccm)</label
                 >
                 <div class="input-group">
                   <span class="input-group-text"
@@ -213,30 +240,12 @@
                     class="form-control"
                     id="engine-displacement"
                     name="engine-displacement"
-                    placeholder="Unesite Zapreminu Motora (in L)"
+                    placeholder="Unesite Zapreminu Motora (in ccm)"
                     required
                   />
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="co2-emissions" class="form-label"
-                  >CO2 Emisija (in g/km)</label
-                >
-                <div class="input-group">
-                  <span class="input-group-text"
-                    ><i class="bi bi-cloud"></i
-                  ></span>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="co2-emissions"
-                    name="co2-emissions"
-                    placeholder="Unesite CO2 Emisija (in g/km)"
-                    required
-                  />
-                </div>
-              </div>
-              <!-- Kontaktinformationen -->
+                  <!-- Kontaktinformationen -->
               <div class="mb-3">
                 <label for="email" class="form-label">Email adresa</label>
                 <div class="input-group">
@@ -316,7 +325,9 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-light p-4">
+    <footer
+      class="bg-dark text-light p-4 d-flex flex-column justify-content-between"
+    >
       <div class="container">
         <div class="row text-center text-md-start">
           <!-- Left Section: Contact Info -->
@@ -329,17 +340,25 @@
                 <i class="bi bi-geo-alt-fill me-2"></i>Adresa: Kralja Milutina
                 28v
               </a>
-              <a href="tel:+3811234567" class="d-block mb-2">
+              <a href="tel:+381612885925" class="d-block mb-2">
                 <i class="bi bi-telephone-fill me-2"></i
-                ><span>+3811234567</span>
+                ><span>061 288 59 25</span>
               </a>
-              <a href="mailto:mixa@test.com" class="d-block mb-2">
-                <i class="bi bi-envelope-fill me-2"></i>mixa@test.com
+              <a href="tel:+381373500702" class="d-block mb-2">
+                <i class="bi bi-telephone-fill me-2"></i
+                ><span>037 3500702</span>
+              </a>
+              <a
+                href="mailto:nebojsa.mihajlovictp@gmail.com "
+                class="d-block mb-2"
+              >
+                <i class="bi bi-envelope-fill me-2"></i
+                >nebojsa.mihajlovictp@gmail.com
               </a>
             </p>
           </div>
 
-          <!-- Middle Section: Social Media Links and Copyright Info -->
+          <!-- Middle Section: Social Media Links -->
           <div class="col-md-4 d-flex flex-column align-items-center">
             <div class="mb-3">
               <a
@@ -352,13 +371,6 @@
                 <i class="bi bi-instagram" style="font-size: 2.5rem"></i>
               </a>
             </div>
-            <p class="mb-0">
-              © 2024 Mixa Tehnicki Pregled. Sva prava zadržana.
-            </p>
-            <p class="mb-0">
-              made by
-              <a href="https://www.dimit.cc/" class="text-light">dimit</a>
-            </p>
           </div>
 
           <!-- Right Section: Links to Impressum and Privacy Policy -->
@@ -371,6 +383,14 @@
             >
           </div>
         </div>
+      </div>
+
+      <!-- Copyright Text in Center -->
+      <div class="text-center mt-3">
+        <p class="mb-0">© 2024 Mixa Tehnicki Pregled. Sva prava zadržana.</p>
+        <p class="mb-0">
+          made by <a href="https://www.dimit.cc/" class="text-light">dimit</a>
+        </p>
       </div>
     </footer>
   </body>
