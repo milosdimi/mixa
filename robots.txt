@@ -1,9 +1,9 @@
-# robots.txt for https://www.mixa.cc/
+# robots.txt for https://www.mixa-krusevac.com/
 
 User-agent: *
 Disallow: /private/
 Disallow: /tmp/
 Allow: /
 
-Sitemap: https://www.mixa.cc/sitemap.xml
+Sitemap: https://www.mixa-krusevac.com/sitemap.xml
 
