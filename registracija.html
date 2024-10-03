@@ -204,25 +204,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <label for="mileage" class="form-label"
-                  >Kilometraža (u km)</label
-                >
-                <div class="input-group">
-                  <span class="input-group-text"
-                    ><i class="bi bi-speedometer2"></i
-                  ></span>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="mileage"
-                    name="mileage"
-                    placeholder="Unesite kilometražu vozila"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="ps" class="form-label">Snaga (kW)</label>
+                <label for="kW" class="form-label">Snaga (kW)</label>
                 <div class="input-group">
                   <span class="input-group-text"
                     ><i class="bi bi-tachometer"></i
@@ -230,8 +212,8 @@
                   <input
                     type="number"
                     class="form-control"
-                    id="ps"
-                    name="ps"
+                    id="kW"
+                    name="kW"
                     placeholder="Unesite broj kW"
                     required
                   />
@@ -302,6 +284,7 @@
                     placeholder="Dodatne informacije (opciono)"
                   ></textarea>
                 </div>
+                <input type="hidden" name="message" value="Zovi Coveka Za Cenu registracije" />
               </div>
               <button type="submit" class="btn btn-primary">
                 <i class="bi bi-calculator"></i> Izračunajte troškove
